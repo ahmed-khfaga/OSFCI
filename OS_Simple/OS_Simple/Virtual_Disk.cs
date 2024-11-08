@@ -49,13 +49,13 @@ namespace OS_Simple
             //disk.Seek(clusterIndex * clusterSize, SeekOrigin.Begin);
             //disk.Write(buffer, 0, buffer.Length);
             //disk.Flush();
-            if (cluster.Length != clusterSize)
+            if (cluster.Length > clusterSize )
             {
                 throw new ArgumentException($"Cluster must be {clusterSize} bytes");
             }
             disk.Seek(clusterIndex * clusterSize, SeekOrigin.Begin);
             disk.Write(cluster, 0, clusterSize);
-            disk.Flush(); // Ensures data is saved to disk
+            disk.Flush(); 
         }
         public static byte[] readCluster(int clusterIndex) 
         {
@@ -75,6 +75,7 @@ namespace OS_Simple
         bool isNew()
         {
             disk.Seek(0,SeekOrigin.End);
+
             int size = (int)disk.Position;
 
             return size == 0;
