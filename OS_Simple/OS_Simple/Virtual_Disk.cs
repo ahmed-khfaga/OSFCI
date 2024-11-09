@@ -81,7 +81,10 @@ namespace OS_Simple
             return size == 0;
         }
 
-
+        public static void closeDisk()
+        {
+            disk.Close();
+        }
 
 
 
