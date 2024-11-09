@@ -80,6 +80,11 @@ namespace OS_Simple
             return Converter.IntArrayToByteArray(arr);
         }
 
+
+        public static int getFreeSize()
+        {
+            return getAvailabelClusters() * 1024;
+        }
         public static void writeFAT()
         {
             byte[] FATBYTES = Converter.IntArrayToByteArray(FAT);
