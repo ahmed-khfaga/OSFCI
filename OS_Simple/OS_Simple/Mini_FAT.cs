@@ -130,5 +130,10 @@ namespace OS_Simple
             return -1;
         }
 
+        public static void closeTheSystem()
+        {
+            writeFAT();
+            Virtual_Disk.closeDisk();
+        }
     }
 }
