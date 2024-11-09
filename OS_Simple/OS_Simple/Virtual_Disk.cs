@@ -72,7 +72,7 @@ namespace OS_Simple
             return diskSize - (int)disk.Position;
         }
 
-        bool isNew()
+        public static bool isNew()
         {
             disk.Seek(0,SeekOrigin.End);
 
