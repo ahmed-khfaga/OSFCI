@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "D:\\3th sem\\projects\\osGit\\OS_Simple\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{710E5E15-9496-450E-BA02-F31DD74A2565}|OS_Simple\\OS_Simple.csproj|d:\\3th sem\\projects\\osgit\\os_simple\\os_simple\\virtual_disk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{710E5E15-9496-450E-BA02-F31DD74A2565}|OS_Simple\\OS_Simple.csproj|D:\\3th sem\\projects\\osGit\\OS_Simple\\os_simple\\converter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{710E5E15-9496-450E-BA02-F31DD74A2565}|OS_Simple\\OS_Simple.csproj|solutionrelative:os_simple\\converter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{710E5E15-9496-450E-BA02-F31DD74A2565}|OS_Simple\\OS_Simple.csproj|D:\\3th sem\\projects\\osGit\\OS_Simple\\os_simple\\virtual_disk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{710E5E15-9496-450E-BA02-F31DD74A2565}|OS_Simple\\OS_Simple.csproj|solutionrelative:os_simple\\virtual_disk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{710E5E15-9496-450E-BA02-F31DD74A2565}|OS_Simple\\OS_Simple.csproj|d:\\3th sem\\projects\\osgit\\os_simple\\os_simple\\mini_fat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{710E5E15-9496-450E-BA02-F31DD74A2565}|OS_Simple\\OS_Simple.csproj|solutionrelative:os_simple\\mini_fat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{710E5E15-9496-450E-BA02-F31DD74A2565}|OS_Simple\\OS_Simple.csproj|D:\\3th sem\\projects\\osGit\\OS_Simple\\os_simple\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,19 +31,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Converter.cs",
+              "DocumentMoniker": "D:\\3th sem\\projects\\osGit\\OS_Simple\\OS_Simple\\Converter.cs",
+              "RelativeDocumentMoniker": "OS_Simple\\Converter.cs",
+              "ToolTip": "D:\\3th sem\\projects\\osGit\\OS_Simple\\OS_Simple\\Converter.cs",
+              "RelativeToolTip": "OS_Simple\\Converter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T14:23:52.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Mini_FAT.cs",
+              "DocumentMoniker": "D:\\3th sem\\projects\\osGit\\OS_Simple\\OS_Simple\\Mini_FAT.cs",
+              "RelativeDocumentMoniker": "OS_Simple\\Mini_FAT.cs",
+              "ToolTip": "D:\\3th sem\\projects\\osGit\\OS_Simple\\OS_Simple\\Mini_FAT.cs",
+              "RelativeToolTip": "OS_Simple\\Mini_FAT.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAuwIcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T14:09:07.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Virtual_Disk.cs",
               "DocumentMoniker": "D:\\3th sem\\projects\\osGit\\OS_Simple\\OS_Simple\\Virtual_Disk.cs",
               "RelativeDocumentMoniker": "OS_Simple\\Virtual_Disk.cs",
               "ToolTip": "D:\\3th sem\\projects\\osGit\\OS_Simple\\OS_Simple\\Virtual_Disk.cs",
               "RelativeToolTip": "OS_Simple\\Virtual_Disk.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAOAAAA",
+              "ViewState": "AQIAADYAAAAAAAAAAAAYwFAAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-07T15:00:09.381Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\3th sem\\projects\\osGit\\OS_Simple\\OS_Simple\\Program.cs",
               "RelativeDocumentMoniker": "OS_Simple\\Program.cs",
