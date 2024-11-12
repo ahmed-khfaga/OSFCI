@@ -39,7 +39,95 @@ namespace OS_Simple
             return list;
         }
 
+        #region ss
+        // Now we need other 6 method 
+        // :Directory_EntryToBytes 
+        //::BytesToDirectory_Entry
+        //::BytesToDirectory_Entries
+        //::Directory_EntriesToBytes
+        /*
+         * Note:- if you use another programming language
+           like python or C# you will need to implement 
+           another two methods, one to convert string to 
+           array of bytes and the other to convert array of bytes to string. 
+         */ 
+        #endregion
 
+        // Converts a string to a array of bytes
+        public static byte[] StringToByteArray(string str)
+        {
+            return Encoding.ASCII.GetBytes(str);
+        }
+        // Convert array of bytes to a string
+        public static string ByteArrayToString(byte[] bytes)
+        {
+            return Encoding.ASCII.GetString(bytes).TrimEnd('\0');
+        }
+        public static List<byte>Directory_EntryToBytes(Directory_Entry E)
+        {
+            List<byte> list = new List<byte>(32);
+            list.AddRange(Encoding.ASCII.GetBytes(E.Dir_Namee));
+
+            list.Add(E.dir_Attr);
+
+            list.AddRange(E.Dir_Empty);
+
+            list.AddRange(IntToByte(E.dir_First_Cluster));
+
+            list.AddRange(IntToByte(E.dir_FileSize));
+
+            return list;
+        }
+        public static Directory_Entry BytesToDirectory_Entry(byte[] bytes)
+        {
+
+            char[] dirName = Encoding.ASCII.GetChars(bytes, 0, 11);
+
+
+            byte dirAttr = bytes[11];
+
+
+            byte[] dirEmpty = bytes.Skip(12).Take(12).ToArray();
+
+
+            int dirFirstCluster = BitConverter.ToInt32(bytes, 24);
+
+
+            int dirFileSize = BitConverter.ToInt32(bytes, 28);
+
+            return new Directory_Entry(dirName, dirAttr, dirFirstCluster, dirFileSize);
+
+        }
+
+        public static List<Directory_Entry> BytesToDirectory_Entries(byte[] bytes) 
+        {
+            List<Directory_Entry> dir = new List<Directory_Entry>();    
+            for(int i = 0; i < bytes.Length; i+=32)
+            {
+                byte[] entryBytes=bytes.Skip(i).Take(32).ToArray();
+
+
+                if (entryBytes[0] == 0)
+                    break;
+
+
+                Directory_Entry entry = BytesToDirectory_Entry(entryBytes);
+                dir.Add(entry);
+            }
+            return dir;
+        }
+        public static List<byte> Directory_EntriesToBytes(List<Directory_Entry> entries)
+        {
+            List<byte> bytes = new List<byte>(entries.Count * 32);
+
+            foreach (Directory_Entry entry in entries)
+            {
+                List<byte> entryBytes = Directory_EntryToBytes(entry);
+                bytes.AddRange(entryBytes);
+            }
+
+            return bytes;
+        }
 
 
     }
