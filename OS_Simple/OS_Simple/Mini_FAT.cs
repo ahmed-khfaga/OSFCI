@@ -50,10 +50,13 @@ namespace OS_Simple
         public static void readFAT()
         {
             List<byte> bytes = new List<byte>();
-            for (int i = 0; i <= 4; i++)
+            // make change to i start from 1 not zero cause 0 for superBlock 
+            for (int i = 1; i <= 4; i++)
             {
                 bytes.AddRange(Virtual_Disk.readCluster(i));
             }
+            //  convert List<byte> to array of int , because FAT is Integer array
+            FAT=Converter.ByteArrayToIntArray(bytes.ToArray());
         }
         public static void printFat()
         {
