@@ -27,7 +27,34 @@ namespace OS_Simple
                     FAT[i] = 0;
             }
         }
+        public static byte[] createSuperBlock()
+        {
+            int[] arr = new int[256];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = 0;
+            }
+            return Converter.IntArrayToByteArray(arr);
+        }
 
+        public static void writeFAT()
+        {
+            byte[] FATBYTES = Converter.IntArrayToByteArray(FAT);
+            List<byte[]> cluster = Converter.SplitBytes(FATBYTES);
+            for (int i = 0; i < cluster.Count; i++)
+            {
+                Virtual_Disk.writeCluster(cluster[i], i + 1);
+            }
+
+        }
+        public static void readFAT()
+        {
+            List<byte> bytes = new List<byte>();
+            for (int i = 0; i <= 4; i++)
+            {
+                bytes.AddRange(Virtual_Disk.readCluster(i));
+            }
+        }
         public static void printFat()
         {
             for(int i = 0;i < FAT.Length;i++)
@@ -70,39 +97,12 @@ namespace OS_Simple
             return 1;
         }
 
-        public static byte[]createSuperBlock()
-        {
-            int[] arr = new int[256];
-            for(int i=0;i<arr.Length;i++)
-            {
-                arr[i] = 0;
-            }
-            return Converter.IntArrayToByteArray(arr);
-        }
-
-
+      
         public static int getFreeSize()
         {
             return getAvailabelClusters() * 1024;
         }
-        public static void writeFAT()
-        {
-            byte[] FATBYTES = Converter.IntArrayToByteArray(FAT);
-            List<byte[]> cluster = Converter.SplitBytes(FATBYTES);
-            for(int i=0;i<cluster.Count;i++) 
-            {
-                Virtual_Disk.writeCluster(cluster[i], i + 1);
-            }
-
-        }
-        public static void readFAT() 
-        {
-           List<byte>bytes= new List<byte>();
-            for(int i=0;i<=4;i++)
-            {
-                bytes.AddRange(Virtual_Disk.readCluster(i));
-            }
-        }
+      
         public static void InitializeOrOpenFileSystem(string name)
         {
             Virtual_Disk.CreateOrOpen_Disk(name);
@@ -116,6 +116,7 @@ namespace OS_Simple
             else
                 readFAT();
         }
+        //setClusterPointer
         public static void setNext(int clusterIndex,int pointer)
         {
             if(clusterIndex >= 0 && clusterIndex < FAT.Length && pointer >=0 && pointer < FAT.Length)
@@ -123,6 +124,7 @@ namespace OS_Simple
                 FAT[clusterIndex] = pointer;
             }
         }
+        //getClusterStatus
         public static int getNext(int clusterindex)
         {
             if(clusterindex >= 0 && clusterindex < FAT.Length)
