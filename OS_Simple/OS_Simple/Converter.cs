@@ -29,15 +29,48 @@ namespace OS_Simple
             }
             return n;
         }
-        public static List<byte[]> SplitBytes(byte[] data,int size = 1024)
+        //public static List<byte[]> SplitBytes(byte[] data,int size = 1024)
+        //{
+        //    List<byte[]> list = new List<byte[]>();
+        //    for(int i = 0; i < data?.Length;i += size) 
+        //    {
+        //        list.Add(data.Skip(i).Take(size).ToArray());
+        //    }
+        //    return list;
+        //}
+        public static List<byte[]> SplitBytes(byte[] bytes, int chunkSize = 1024)
         {
-            List<byte[]> list = new List<byte[]>();
-            for(int i = 0; i < data?.Length;i += size) 
+            List<byte[]> chunks = new List<byte[]>();
+
+            if (bytes.Length == 0)
             {
-                list.Add(data.Skip(i).Take(size).ToArray());
+                
+                chunks.Add(new byte[chunkSize]);
+                return chunks;
             }
-            return list;
+
+            int fullChunks = bytes.Length / chunkSize;
+            int remainder = bytes.Length % chunkSize;
+
+            
+            for (int i = 0; i < fullChunks; i++)
+            {
+                byte[] chunk = new byte[chunkSize];
+                Array.Copy(bytes, i * chunkSize, chunk, 0, chunkSize);
+                chunks.Add(chunk);
+            }
+
+            
+            if (remainder > 0)
+            {
+                byte[] lastChunk = new byte[chunkSize];
+                Array.Copy(bytes, fullChunks * chunkSize, lastChunk, 0, remainder);
+                chunks.Add(lastChunk);
+            }
+
+            return chunks;
         }
+
 
         #region ss
         // Now we need other 6 method 
@@ -50,7 +83,7 @@ namespace OS_Simple
            like python or C# you will need to implement 
            another two methods, one to convert string to 
            array of bytes and the other to convert array of bytes to string. 
-         */ 
+         */
         #endregion
 
         // Converts a string to a array of bytes
