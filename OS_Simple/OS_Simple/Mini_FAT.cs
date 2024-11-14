@@ -29,12 +29,14 @@ namespace OS_Simple
         }
         public static byte[] createSuperBlock()
         {
-            int[] arr = new int[256];
-            for (int i = 0; i < arr.Length; i++)
-            {
-                arr[i] = 0;
-            }
-            return Converter.IntArrayToByteArray(arr);
+            //int[] arr = new int[256];
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    arr[i] = 0;
+            //}
+            //return Converter.IntArrayToByteArray(arr);
+            return new byte[1024]; // initializes all elements to 0
+
         }
 
         public static void writeFAT()
