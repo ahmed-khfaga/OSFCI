@@ -7,8 +7,12 @@
       "RelativeMoniker": "D:0:0:{710E5E15-9496-450E-BA02-F31DD74A2565}|OS_Simple\\OS_Simple.csproj|solutionrelative:os_simple\\directory_entry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{710E5E15-9496-450E-BA02-F31DD74A2565}|OS_Simple\\OS_Simple.csproj|d:\\3th sem\\projects\\osgit\\os_simple\\os_simple\\converter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{710E5E15-9496-450E-BA02-F31DD74A2565}|OS_Simple\\OS_Simple.csproj|D:\\3th sem\\projects\\osGit\\OS_Simple\\os_simple\\converter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{710E5E15-9496-450E-BA02-F31DD74A2565}|OS_Simple\\OS_Simple.csproj|solutionrelative:os_simple\\converter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{710E5E15-9496-450E-BA02-F31DD74A2565}|OS_Simple\\OS_Simple.csproj|D:\\3th sem\\projects\\osGit\\OS_Simple\\os_simple\\mini_fat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{710E5E15-9496-450E-BA02-F31DD74A2565}|OS_Simple\\OS_Simple.csproj|solutionrelative:os_simple\\mini_fat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{710E5E15-9496-450E-BA02-F31DD74A2565}|OS_Simple\\OS_Simple.csproj|D:\\3th sem\\projects\\osGit\\OS_Simple\\os_simple\\virtual_disk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{710E5E15-9496-450E-BA02-F31DD74A2565}|OS_Simple\\OS_Simple.csproj|D:\\3th sem\\projects\\osGit\\OS_Simple\\os_simple\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{710E5E15-9496-450E-BA02-F31DD74A2565}|OS_Simple\\OS_Simple.csproj|solutionrelative:os_simple\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{710E5E15-9496-450E-BA02-F31DD74A2565}|OS_Simple\\OS_Simple.csproj|D:\\3th sem\\projects\\osGit\\OS_Simple\\os_simple\\mini_fat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{710E5E15-9496-450E-BA02-F31DD74A2565}|OS_Simple\\OS_Simple.csproj|solutionrelative:os_simple\\mini_fat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "OS_Simple\\Directory_Entry.cs",
               "ToolTip": "D:\\3th sem\\projects\\osGit\\OS_Simple\\OS_Simple\\Directory_Entry.cs",
               "RelativeToolTip": "OS_Simple\\Directory_Entry.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T23:55:51.324Z",
               "EditorCaption": ""
@@ -53,14 +53,13 @@
               "RelativeDocumentMoniker": "OS_Simple\\Converter.cs",
               "ToolTip": "D:\\3th sem\\projects\\osGit\\OS_Simple\\OS_Simple\\Converter.cs",
               "RelativeToolTip": "OS_Simple\\Converter.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAADMAAAALAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T14:23:52.008Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-08T14:23:52.008Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Mini_FAT.cs",
               "DocumentMoniker": "D:\\3th sem\\projects\\osGit\\OS_Simple\\OS_Simple\\Mini_FAT.cs",
               "RelativeDocumentMoniker": "OS_Simple\\Mini_FAT.cs",
@@ -68,12 +67,11 @@
               "RelativeToolTip": "OS_Simple\\Mini_FAT.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T14:09:07.587Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-08T14:09:07.587Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Virtual_Disk.cs",
               "DocumentMoniker": "D:\\3th sem\\projects\\osGit\\OS_Simple\\OS_Simple\\Virtual_Disk.cs",
               "RelativeDocumentMoniker": "OS_Simple\\Virtual_Disk.cs",
@@ -81,12 +79,11 @@
               "RelativeToolTip": "OS_Simple\\Virtual_Disk.cs",
               "ViewState": "AQIAABYAAAAAAAAAAAAQwEwAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T15:00:09.381Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T15:00:09.381Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\3th sem\\projects\\osGit\\OS_Simple\\OS_Simple\\Program.cs",
               "RelativeDocumentMoniker": "OS_Simple\\Program.cs",
@@ -94,8 +91,7 @@
               "RelativeToolTip": "OS_Simple\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T14:59:28.296Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T14:59:28.296Z"
             }
           ]
         }
